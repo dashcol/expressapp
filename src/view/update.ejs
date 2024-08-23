@@ -1,0 +1,27 @@
+<%if(errorMessage){%>
+    <div style="background-color: red;">
+        <%=errorMessage%>
+    </div>
+    <%}%>
+    
+<div class="container">
+    <form action="/" method="Post"  enctype="multipart/form-data">
+        <div class="form">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" >
+        </div>
+        <div class="form">
+            <label for="desc">Description</label>
+            <input type="text" id="desc" name="desc" >
+        </div>
+        <div class="form">
+            <input type="file" name="image" accept="image/*" required>
+            
+        </div>
+        <div class="form">
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <button type="submit">Submit</button> 
+    </form>
+    </div>

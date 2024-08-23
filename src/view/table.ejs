@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%products.forEach(p=>{ %>
+            <tr>
+                <td> 
+            <%=p.id%>  
+        </td>
+    <td>      
+            <%=p.name%>      
+        </td>
+    <td>  
+            <%=p.desc%>       
+        </td> 
+        <td><img src="<%= p.image %>"  style="max-width: 50px; max-height: 50px;"></td>
+ 
+        <td> <%=p.price%> </td>    
+        
+        <td><button href="/update/<%=p.id%>">Update</button> </td>    
+           
+                    </tr>
+       <% })%>
+    </tbody>
+</table>
