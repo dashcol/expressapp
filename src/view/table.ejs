@@ -6,7 +6,8 @@
             <th>Description</th>
             <th>Product</th>
             <th>Price</th>
-            <th>Update</th>
+            <th>Actions</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -25,7 +26,8 @@
  
         <td> <%=p.price%> </td>    
         
-        <td><button href="/update/<%=p.id%>">Update</button> </td>    
+        <td><a href="/update/<%=p.id%>" class="btn">Update</a>    
+        <a href="/delete/<%=p.id%>" class="btn btn-danger">Delete</a></td> 
            
                     </tr>
        <% })%>

@@ -19,6 +19,15 @@ static add(name,desc,price,image){
    );
    products.push(newProduct)
 }
+
+static getByid(id){
+    return products.find(p=>p.id==id);
+}
+static delete(id){
+    const index=products.findIndex(p=>p.id==id);
+    products.splice(index,1);
+
+}
 }
 
 var products=[new data(101,'Apple','A product by Apple','https://m.media-amazon.com/images/I/61VuVU94RnL._SX679_.jpg',125000),

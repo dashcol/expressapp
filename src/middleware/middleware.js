@@ -1,9 +1,7 @@
 import {body,validationResult} from 'express-validator';
 
 
-const validate=async(req,res,next)=>{
-    console.log(req.body); 
-console.log(req.file);
+const validate=async(req,res,next)=>{ 
     const rules=[
     body('name').notEmpty().withMessage("Enter a name"),
     body('desc').notEmpty().withMessage("Please provide a description"),

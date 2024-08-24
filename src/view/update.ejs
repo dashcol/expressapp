@@ -6,21 +6,22 @@
     
 <div class="container">
     <form action="/" method="Post"  enctype="multipart/form-data">
+        <input type="hidden" id="id" name="id" value="<%=products.id%>">
         <div class="form">
             <label for="name">Product Name</label>
-            <input type="text" id="name" name="name" >
+            <input type="text" id="name" name="name" value="<%=products.name%>" >
         </div>
         <div class="form">
             <label for="desc">Description</label>
-            <input type="text" id="desc" name="desc" >
+            <input type="text" id="desc" name="desc" value="<%=products.desc%>" >
         </div>
         <div class="form">
-            <input type="file" name="image" accept="image/*" required>
+            <input type="file" name="image" accept="image/*" value="<%=products.image%>">
             
         </div>
         <div class="form">
             <label for="price">Price</label>
-            <input type="text" id="price" name="price">
+            <input type="text" id="price" name="price" value="<%=products.price%>">
         </div>
         <button type="submit">Submit</button> 
     </form>

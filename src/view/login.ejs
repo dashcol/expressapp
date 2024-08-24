@@ -1,0 +1,19 @@
+<%if(errorMessage){%>
+    <div style="background-color: red;">
+        <%=errorMessage%>
+    </div>
+    <%}%>
+    
+<div class="login">
+<form action="/login" method="post">
+    <div>
+        <label for="email">Email or Phone </label>
+        <input type="text" name="email">
+       </div>
+       <div>
+        <label for="password">Password </label>
+        <input type="password" name="password">
+       </div>
+       <button>Submit</button>
+</form>
+</div>

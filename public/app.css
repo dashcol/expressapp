@@ -265,3 +265,154 @@ button:hover::before {
 button:hover::after {
     transform: rotate(-45deg) scale(1);
 }
+
+/* Basic button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff; /* Blue color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects */
+.btn:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active state */
+.btn:active {
+    background-color: #004080; /* Even darker blue */
+    transform: scale(0.95); /* Slight shrink effect */
+}
+
+
+.btn-danger {
+    background-color: #dc3545; 
+}
+
+.btn-danger:hover {
+    background-color: #c82333; 
+}
+
+.btn-danger:active {
+    background-color: #bd2130; 
+}
+
+
+
+.login {
+    background-color: #ffffff;
+    position: absolute;
+    top:100px;
+    left:100px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    transform: translate(70%);
+     height:400px;
+     background-color: #f0f2f5; 
+    font-family: Arial, sans-serif;
+}
+form{
+    position: absolute;
+    top:150px;
+    left:75px;
+}
+
+.login form div {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+     width: 90%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Submit Button Styles */
+.login button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login button:hover {
+    background-color: #2563eb;
+}
+
+/* Additional Effects */
+.login form div::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
