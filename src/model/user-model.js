@@ -12,7 +12,6 @@ static getUser(){
 static add(name,email,password){
     const newuser=new userModel(user.length+101,name,email,password);
     user.push(newuser);
-    console.log(user)
 }
 
 static validUser(email,password){

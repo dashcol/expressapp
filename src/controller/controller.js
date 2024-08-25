@@ -1,17 +1,14 @@
 import data from "../model/model.js"
 
-
-
-
 export default class inventoryData{
    
     inventoryItems(req,res){
         let products=data.get();
-      res.render('table',{products})
+      res.render('table',{products,userEmail:req.session.userEmail})
     }
 
     addItems(req,res){
-      res.render('add',{errorMessage:null})
+      res.render('add',{errorMessage:null,userEmail:req.session.userEmail})
     }
 
     newItems(req,res){
@@ -20,7 +17,7 @@ export default class inventoryData{
       const image='images/'+req.file.filename;
       data.add(name, desc, image, price);
       const products = data.get();
-      res.render('table',{products});
+      res.render('table',{products,userEmail:req.session.userEmail});
     }
 
 
@@ -28,7 +25,7 @@ export default class inventoryData{
           const id=req.params.id;
           const found=data.getByid(id)
           if(found){
-            res.render('update',{products:found,errorMessage:null})
+            res.render('update',{products:found,errorMessage:null,userEmail:req.session.userEmail})
           }
           else{
             res.status(401).send('product not found');
@@ -42,7 +39,7 @@ export default class inventoryData{
       }
       data.delete(id);
       const products = data.get();
-      res.render('table',{products});
+      res.render('table',{products,userEmail:req.session.userEmail});
 
     }
   

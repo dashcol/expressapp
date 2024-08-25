@@ -24,7 +24,18 @@ const user=userModel.validUser(email,password);
 if(!user){
  return res.render('login',{errorMessage:'Invalid Credentials'})
 }
+req.session.userEmail=email;
 var products=data.get();
-res.render('table',{products});
-  } 
+res.render('table',{products,userEmail:req.session.userEmail});
+  }  
+  
+  logout(req,res){
+    req.session.destroy((err)=>{
+      if(err){
+        console.log(err);
+      }else{
+        res.redirect('/login');
+      }
+    })
+  }
 }
