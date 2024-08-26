@@ -36,6 +36,7 @@ res.render('table',{products,userEmail:req.session.userEmail});
       }else{
         res.redirect('/login');
       }
-    })
+    });
+    res.clearCookie('lastVisit');   
   }
 }

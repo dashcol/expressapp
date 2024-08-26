@@ -8,6 +8,8 @@ import User from './src/controller/user-controller.js';
 import validated from './src/middleware/user-middleware.js';
 import session from 'express-session';
 import { auth } from './src/middleware/auth.js';
+import cookieParser from 'cookie-parser';
+import { setLastVisit } from './src/middleware/last-visit.js';
 
 
 
@@ -25,7 +27,10 @@ app.use(session({
     resave:false,
     saveUninitialized:true,
     cookie:{secure:false}, 
-}))
+}));
+
+app.use(cookieParser());
+app.use(setLastVisit);
 
 
 

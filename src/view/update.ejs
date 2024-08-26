@@ -5,6 +5,7 @@
     <%}%>
     
 <div class="container">
+    <div class="add">
     <form action="/" method="Post"  enctype="multipart/form-data">
         <input type="hidden" id="id" name="id" value="<%=products.id%>">
         <div class="form">
@@ -23,6 +24,7 @@
             <label for="price">Price</label>
             <input type="text" id="price" name="price" value="<%=products.price%>">
         </div>
-        <button type="submit">Submit</button> 
+        <input type="submit" value="Update"> 
     </form>
+</div>
     </div>

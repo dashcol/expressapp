@@ -1,418 +1,196 @@
-/* Reset some default styles */
-body, ul, li, a {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, sans-serif;
-   
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
 }
 
-/* Basic styles for the navbar */
+/* Navbar Styles */
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    font-family: Arial, sans-serif;
-}
-
-/* Logo styles */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Styles for the nav links */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* Styles for each nav link */
-.nav-links li a {
-    color: #fff;
-    font-size: 1.2rem;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-/* Hover effect: change color */
-.nav-links li a:hover {
-    color: #ff6347;
-}
-
-/* Before effect: small underline */
-.nav-links li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background-color: #ff6347;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover state to show the underline */
-.nav-links li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-/* After effect: background highlight */
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255, 99, 71, 0.2);
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-}
-
-/* Hover state to show the background highlight */
-.nav-links li a:hover::after {
-    width: 100%;
-}
-
-/* Navbar styles */
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    color: white;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 20px;
 }
 
 .nav-links li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #ff6347;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-/* Table styles */
+/* register */
+
+
+/* Form Container Styles */
+.container, .container1,.container3 {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Before and After Effects */
+.container::before, .container1::before,.container3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container::after, .container1::after,.container3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover::before, .container1:hover::before,.container3:hover::before
+.container:hover::after, .container1:hover::after,.container3:hover::after {
+    transform: translateY(0);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="file"]
+ {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+form input[type="submit"]{
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+form input[type="submit"] {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #667eea;
+}
+
+/* Alert Message Styles */
+.alert {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Table Styles */
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 
 .table th, .table td {
-    padding: 12px 15px;
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.table thead th {
-    background-color: #333;
-    color: #fff;
+.table th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
 }
 
-.table tbody tr {
-    background-color: #fff;
+.table td img {
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 8px 12px;
+    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect with gradient background */
-.table tbody tr:hover {
-    background: linear-gradient(45deg, #ff6347, #ff4500);
-    color: #fff;
-}
-
-.table tbody tr td {
-    position: relative;
-}
-
-/* Before and After pseudo-elements for hover effect */
-.table tbody tr td::before, .table tbody tr td::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff6347, #ff4500);
-    z-index: -1;
-    transition: transform 0.3s ease;
-    transform: scale(0);
-    opacity: 0.5;
-}
-
-.table tbody tr:hover td::before {
-    transform: scale(1);
-}
-
-.table tbody tr td::after {
-    transform: scale(0.95);
-}
-
-.table tbody tr:hover td::after {
-    transform: scale(1);
-}
-.container{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff6347, #ff4500);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-}
-
-form {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    width: 300px;
-}
-
-.form {
-    margin-bottom: 15px;
-    position: relative;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 16px;
-    box-sizing: border-box;
-    outline: none;
-    transition: background 0.3s ease, border 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="file"]:focus {
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background: linear-gradient(135deg, #ff6347, #ff4500);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-button::before,
-button::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-    transition: transform 0.5s ease;
-    transform: rotate(45deg) scale(0);
-}
-
-button:hover::before {
-    transform: rotate(45deg) scale(1);
-}
-
-button:hover::after {
-    transform: rotate(-45deg) scale(1);
-}
-
-/* Basic button styling */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    background-color: #007bff; /* Blue color */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Hover effects */
 .btn:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #667eea;
 }
-
-/* Active state */
-.btn:active {
-    background-color: #004080; /* Even darker blue */
-    transform: scale(0.95); /* Slight shrink effect */
-}
-
 
 .btn-danger {
-    background-color: #dc3545; 
+    background: linear-gradient(135deg, #f44336, #e57373);
 }
 
 .btn-danger:hover {
-    background-color: #c82333; 
+    background-color: #f44336;
 }
 
-.btn-danger:active {
-    background-color: #bd2130; 
-}
-
-
-
-.login {
-    background-color: #ffffff;
-    position: absolute;
-    top:100px;
-    left:100px;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    transform: translate(70%);
-     height:400px;
-     background-color: #f0f2f5; 
-    font-family: Arial, sans-serif;
-}
-form{
-    position: absolute;
-    top:150px;
-    left:75px;
-}
-
-.login form div {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.login label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333333;
-    font-weight: bold;
-}
-
-.login input[type="text"],
-.login input[type="password"] {
-     width: 90%;
-    padding: 12px 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-.login input[type="text"]:focus,
-.login input[type="password"]:focus {
-    border-color: #3b82f6;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-}
-
-/* Submit Button Styles */
-.login button {
-    width: 100%;
-    padding: 12px 16px;
-    background-color: #3b82f6;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.login button:hover {
-    background-color: #2563eb;
-}
-
-/* Additional Effects */
-.login form div::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 10px;
-    width: 0;
-    height: 2px;
-    background-color: #3b82f6;
-    transition: width 0.3s;
-}
-
-.container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+/* Error Message Styles */
+div[style*="background-color: red;"] {
+    background: linear-gradient(135deg, #f44336, #e57373);
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-input[type="submit"]:hover {
-    background-color: #45a049;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
 }
